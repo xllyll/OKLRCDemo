@@ -45,6 +45,10 @@
     // Drawing code
 }
 */
+-(void)setLrcColor:(UIColor *)lrcColor{
+    _lrcColor = lrcColor;
+    _OKlrcLabel.textColor = _lrcColor;
+}
 -(void)comfig{
     
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

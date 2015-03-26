@@ -49,6 +49,29 @@
         self.timeLabel.text = [NSString stringWithFormat:@"%d:%d",(int)self.player.currentTime / 60, (int)self.player.currentTime % 60];
     }
 }
+- (IBAction)changeLrcColor:(id)sender {
+    UIButton *button = sender;
+    NSInteger key = button.tag;
+    UIColor *color;
+    switch (key) {
+        case 1:
+            color = [UIColor redColor];
+            break;
+        case 2:
+            color = [UIColor colorWithRed:77.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+            break;
+        case 3:
+            color = [UIColor colorWithRed:78.0/255.0 green:181.0/255.0 blue:25.0/255.0 alpha:1.0];
+            break;
+        case 4:
+            color = [UIColor colorWithRed:3.0/255.0 green:0.0/255.0 blue:254.0/255.0 alpha:1.0];
+            break;
+            
+        default:
+            break;
+    }
+    _lrcView.lrcColor = color;
+}
 
 
 - (void)didReceiveMemoryWarning
